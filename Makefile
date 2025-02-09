@@ -10,7 +10,7 @@ wasm:
 	mkdir -p docs
 	
 	# Compile C++ to WebAssembly and output to docs/
-	emcc main.cpp glad/src/glad.c -o docs/$(WASM_TARGET) -s USE_GLFW=3 -s USE_WEBGL2=1 -Iglad/include
+	emcc main.cpp glad/src/glad.c -o docs/index.html -s USE_GLFW=3 -s USE_WEBGL2=1 -Iglad/include
 
 all:
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC) $(LDFLAGS)
